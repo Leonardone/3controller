@@ -16,13 +16,62 @@
 
 <body ng-app="app">
   <!-- bind the item controller to an element -->
+  <div ng-controller="ItemController" class="container">
+    <div class="text-center">
+  <h1 ng-bind="titolo"></h1>
+    </div>
+
+  <!--<div class="row" ng-repeat="arma in listaArmi">
+    <h4 ng-bind="arma.nome"></h4>
+    
+    <p ng-bind="arma.slots"></p>
+    <div class="text-center">
+    <img ng-src="{{arma.image}}">
+    </div>
+    <h4 ng-bind="arma.descrizione"></h4>
+    <p>numero di slots:{{arma.slots}}</p>
+  </div>-->
+  
+<div class="row">
+  <table class="table table-striped">
+    <thead >
+      <tr>
+        <th>fsdfsdf</th>
+        <th>dfsdfsdf</th>
+        <th>sdfsdf</th>
+        <th>dsfsdf</th>
+      </tr> 
+      </thead>
+    <tbody>
+      <tr ng-repeat="arma in listaArmi">
+        <td><img ng-src="{{arma.image}}"></td>
+        <td>{{arma.nome}}</td>
+        <td>{{arma.descrizione}}</td>
+        <td>{{arma.slots}}</td>
+        <td><button  class="btn btn-danger" ng-click="elimina(arma.id, $index)">Elimina</td>
+         
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+  <!--<div class="row">
+    <div ng-show="listanumeri.length" ng-repeat="numero in listanumeri">
+      <p ng-bind="numero"></p>
+
+    </div>-->
+
+  
   <!-- interpolate the data to the view -->
   <!-- understanding the scope -->
   <!-- add handles for behaviours -->
   <!-- create a controller for the player for managing data such as personal and game info -->
+
+  </div>
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="app.js"></script>
   <!-- load the item controller -->
+  <script src="item.controller.js"></script>
 </body>
 
 </html>
