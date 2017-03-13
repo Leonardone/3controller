@@ -35,6 +35,19 @@ $scope.elimina= function(id, indice){
     console.log(id, indice);
     $scope.listaArmi.splice(indice, 1);
 }
+$scope.nuova=[{
+    id: '',
+    nome: '',
+    descrizione: '',
+    slots: '',
+    image: ''
+}]
+$scope.stampa= function(){
+console.log($scope.ilmionome)
+}
+$scope.inserisci= function(){
+    $scope.listaArmi.push($scope.nuova);
+}
 
 // $scope.listanumeri= [1,2,3,4,5];
 });

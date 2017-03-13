@@ -19,7 +19,39 @@
   <div ng-controller="ItemController" class="container">
     <div class="text-center">
   <h1 ng-bind="titolo"></h1>
-    </div>
+  </div>
+   <div class="form-group col-md-6">
+    <label for="nome">Nome</label>
+    <input ng-model="ilmionome" type="text" name="nome" class="form-control" id="name" placeholder="nome">
+  </div>
+  <div class="col-md-2"><button class="btn btn-primary" type="button" ng-click="stampa()" name="button">cerca</button>
+  <p ng-bind="ilmionome"></p>
+  <br></br>
+  </div>
+</br>
+
+<div class="form-group">
+    <label for="id">Id</label>
+    <input ng-model="nuova.id" type="text" class="form-control" id="id" placeholder="id">
+  </div>
+     <div class="form-group">
+    <label for="nome">Nome</label>
+    <input ng-model="nuova.nome" type="text" class="form-control" id="nome" placeholder="nome">
+  </div>
+  <div class="form-group">
+    <label for="descrizione">Slots</label>
+    <input ng-model="nuova.slots" type="text" class="form-control" id="descrizione" placeholder="descrizione">
+  </div>
+  <div class="form-group">
+    <label for="descrizione">Image</label>
+    <input ng-model="nuova.image" type="text" class="form-control" id="descrizione" placeholder="descrizione">
+  </div>
+  <div class="form-group">
+    <label for="descrizione">Descrizione</label>
+    <input ng-model="nuova.descrizione" type="text" class="form-control" id="descrizione" placeholder="descrizione">
+  </div>
+  <button class="btn btn-primary" type="button" ng-click="inserisci()" name="button">cerca</button>
+  
 
   <!--<div class="row" ng-repeat="arma in listaArmi">
     <h4 ng-bind="arma.nome"></h4>
@@ -36,15 +68,15 @@
   <table class="table table-striped">
     <thead >
       <tr>
-        <th>fsdfsdf</th>
-        <th>dfsdfsdf</th>
+        <th>Immagini</th>
+        <th>Arma</th>
         <th>sdfsdf</th>
         <th>dsfsdf</th>
       </tr> 
       </thead>
     <tbody>
-      <tr ng-repeat="arma in listaArmi">
-        <td><img ng-src="{{arma.image}}"></td>
+      <tr ng-repeat="arma in listaArmi track by $index">
+        <td><img ng-src="{{arma.image}}" width="150px"></td>
         <td>{{arma.nome}}</td>
         <td>{{arma.descrizione}}</td>
         <td>{{arma.slots}}</td>
